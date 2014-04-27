@@ -6,7 +6,7 @@
 <p>{{ article.article_text }}</p>
 <hr>
 <p>Комментарии</p>
-{% for comment in comments %}
+{% for comment in article.comments_set.all %}
 	<p>{{ comment.comments_text }}</p>
 {% endfor %}
 {% endblock %}

@@ -27,9 +27,9 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (
-    '/home/snapp/djangoenv/bin/firstapp/templates',
-    '/home/snapp/djangoenv/bin/firstapp/article/templates',
-    '/home/snapp/djangoenv/bin/firstapp/name_blog/templates',
+    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'article', 'templates'),
+    os.path.join(BASE_DIR, 'name_blog', 'templates'),
 )
 
 
@@ -43,7 +43,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'article',
-    'name_blog',
 )
 
 MIDDLEWARE_CLASSES = (

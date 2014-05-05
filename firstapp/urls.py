@@ -5,6 +5,7 @@ from django.contrib import admin
 
 admin.autodiscover()
 
+<<<<<<< HEAD
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'firstapp.views.home', name='home'),
@@ -19,3 +20,11 @@ urlpatterns = patterns('',
 )
 
 
+=======
+urlpatterns = patterns(
+    '',
+    url(r'^$', 'article.views.articles'),
+    url(r'^articles/', include('article.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+)
+>>>>>>> upstream/master

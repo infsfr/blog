@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from django.http.response import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
@@ -28,3 +29,20 @@ def articles(request):
 def article(request, article_id=1):
 	return render_to_response('article.html', {'article': Article.objects.get(id=article_id), 'comments': Comments.objects.filter(comments_article_id=article_id)})
 
+=======
+from article.models import Article, Comments
+
+
+def articles(request):
+    return render(request, 'articles.html', {
+        'articles': Article.objects.all(),
+    })
+
+
+def article(request, article_id=1):
+    print dir(Article.objects.get(id=article_id))
+    return render(request, 'article.html', {
+        'article': Article.objects.get(id=article_id),
+        'comments': Comments.objects.filter(comments_article_id=article_id),
+    })
+>>>>>>> upstream/master

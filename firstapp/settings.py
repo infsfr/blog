@@ -27,9 +27,15 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (
+<<<<<<< HEAD
     '/home/snapp/djangoenv/bin/firstapp/templates',
     '/home/snapp/djangoenv/bin/firstapp/article/templates',
     '/home/snapp/djangoenv/bin/firstapp/name_blog/templates',
+=======
+    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'article', 'templates'),
+    os.path.join(BASE_DIR, 'name_blog', 'templates'),
+>>>>>>> upstream/master
 )
 
 
@@ -42,8 +48,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'article',
     'name_blog',
+=======
+    'foundation',
+    'article',
+>>>>>>> upstream/master
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,4 +98,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+<<<<<<< HEAD
+=======
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+>>>>>>> upstream/master
 STATIC_URL = '/static/'

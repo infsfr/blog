@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'main.html' %}
 
 {% block article %}
@@ -10,3 +11,24 @@
 	<p>{{ comment.comments_text }}</p>
 {% endfor %}
 {% endblock %}
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>{{ article.article_date }}</h4>
+<h2>{{ article.article_title }}</h2>
+<p>{{ article.article_text }}</p>
+
+<hr>
+
+<p>Комментарии</p>
+
+{% for comment in article.comments_set.all %}
+
+	<p>{{ comment.comments_text }}</p>
+
+{% endfor %}
+
+{% endblock content %}
+>>>>>>> upstream/master
